@@ -4,84 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <title>Registration Form</title>
 </head>
 
 <body>
     <div id="formDiv" class="fromStyles">
-        <form action="server.php" method="post" name="Students">
+        <form  name="students" id="students" onsubmit="validateForm()" action="./server.php" method="post">
             <div id="titleDiv">
-                <label for="Students" id="formTitle">STUDENTS LOGIN DETAILS </label><br>
+                <label for="students" id="formTitle">REGISTRATION DETAILS </label><br>
             </div>
             <div>
                 <label for="regno" class="label">Register No: <span>*</span> </label><br>
-                <input type="number" name="regno" id="regno" class="input" placeholder="Enter your Register No">
+                <input type="number" name="regno" id="regno" class="input" placeholder="Enter your Register No" >
                 <br>
             </div>
             <div>
                 <label for="name" class="label">Name: <span>*</span></label><br>
-                <input type="text" name="name" id="name" class="input" placeholder="Enter your Name">
+                <input type="text" name="name" id="name" class="input" placeholder="Enter your Name" >
                 <br>
             </div>
             <div>
                 <label for="mailid" class="label">Email ID: <span>*</span></label><br>
-                <input type="email" name="mailid" id="mailid" class="input" placeholder="Enter your email id">
+                <input type="text" name="mailid" id="mailid" class="input" placeholder="Enter your email id" >
                 <br>
             </div>
             <div>
                 <label for="age" class="label">Age: <span>*</span></label><br>
-                <input type="number" name="age" id="age" class="input" placeholder="Enter your Age">
+                <input type="number" name="age" id="age" class="input" placeholder="Enter your Age" >
                 <br>
             </div>
             <div>
                 <label for="gender" class="label">Gender: <span>*</span></label><br>
                 <div id="genderBox">
-                    <input type="radio" name="gender" id="male" class="radioBtn" value="male">
-                    <label for="male">M</label>
+                    <input type="radio" name="gender" id="male" class="radioBtn" value="male" >
+                    <label for="male">Male</label>
                     <input type="radio" name="gender" id="female" class="radioBtn" value="female">
-                    <label for="female">F</label>
-                    <input type="radio" name="gender" id="transg" class="radioBtn" value="transg">
-                    <label for="transg">TG</label>
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="others" class="radioBtn" value="others">
+                    <label for="others">Others</label>
                     <br>
                 </div>
             </div>
             <div>
                 <label for="domain" class="label">Domain: <span>*</span></label><br>
-                <input type="text" name="domain" id="domain" class="input" placeholder="Domain of interest">
+                <input type="text" name="domain" id="domain" class="input" placeholder="Domains of interest (sep by ',')" >
                 <br>
             </div>
             <div>
                 <label for="progLang" class="label">Programming Languages: <span>*</span></label><br>
-                <input type="text" id="progLang" class="input" placeholder="Enter Programming Languages">
+                <input type="text" id="progLang" class="input" placeholder="Enter Programming Languages (sep by ',')" >
                 <br>
             </div>
             <div id="checkBoxer">
                 <label for="progPltfm" class="label">Programming Platforms: <span>*</span></label><br>
                 <div>
-                    <input type="checkbox" id="leetcode" class="options" name="progPltfm" value="leetcode">
+                    <input type="checkbox" id="leetcode" class="checkOptions" name="progPltfm" value="leetcode">
                     <label for="leetcode">LeetCode</label>
                     <br>
-                    <input type="checkbox" id="skillrack" class="options" name="progPltfm" value="skillrack">
+                    <input type="checkbox" id="skillrack" class="checkOptions" name="progPltfm" value="skillrack">
                     <label for="skillrack">Skillrack</label>
                     <br>
-                    <input type="checkbox" id="g4g" class="options" name="progPltfm" value="g4g">
+                    <input type="checkbox" id="g4g" class="checkOptions" name="progPltfm" value="g4g">
                     <label for="g4g">Geeks for Geeks</label>
                     <br>
-                    <input type="checkbox" id="codechef" class="options" name="progPltfm" value="codechef">
+                    <input type="checkbox" id="codechef" class="checkOptions" name="progPltfm" value="codechef">
                     <label for="codechef">Codechef</label>
                     <br>
-                    <input type="checkbox" id="hackerrank" class="options" name="progPltfm" value="hackerrank">
+                    <input type="checkbox" id="hackerrank" class="checkOptions" name="progPltfm" value="hackerrank">
                     <label for="hackerrank">HackerRank</label>
                     <br>
-                    <input type="checkbox" id="hackerearth" class="options" name="progPltfm" value="hackerearth">
+                    <input type="checkbox" id="hackerearth" class="checkOptions" name="progPltfm" value="hackerearth">
                     <label for="hackerearth">HackerEarth</label>
                     <br>
                 </div>
             </div>
             <div>
                 <label for="department" class="label">Department: <span>*</span></label><br>
-                <select name="department" id="department" class="input">
+                <select name="department" id="department" class="input" required>
                     <option value="none" selected disabled hidden>---</option>
                     <option value="mech" for="department">MECH</option>
                     <option value="cse" for="department">CSE</option>
@@ -93,18 +93,18 @@
             </div>
             <div>
                 <label for="password" class="label">Password: <span>*</span></label><br>
-                <input type="password" name="regno" id="regno" class="input" placeholder="Enter your Password">
+                <input type="password" name="pass" id="pass" class="input" placeholder="Enter your Password" >
                 <br>
             </div>
             <div> <label for="confirmPass" class="label">Confirm Password: <span>*</span></label><br>
-                <input type="password" name="confirmPass" id="confirmPass" class="input" placeholder="Confirm your Password">
+                <input type="password" name="confirmPass" id="confirmPass" class="input" placeholder="Confirm your Password" >
                 <br>
             </div>
-            <button>SUBMIT</button>
+            <input type="submit" id="button">
         </form>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
