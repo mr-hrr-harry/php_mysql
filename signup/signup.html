@@ -12,26 +12,30 @@
     <div id="formDiv" class="fromStyles">
         <form  name="students" id="students" onsubmit="validateForm()" action="./server.php" method="post">
             <div id="titleDiv">
-                <label for="students" id="formTitle">REGISTRATION DETAILS </label><br>
+                <label for="students" id="formTitle">REGISTRATION DETAILS</label><br>
             </div>
             <div>
                 <label for="regno" class="label">Register No: <span>*</span> </label><br>
-                <input type="number" name="regno" id="regno" class="input" placeholder="Enter your Register No" >
+                <input type="number" name="regno" id="regno" class="input" placeholder="Enter your Register No" ><br>   
+                <span id="regnoErr" class="warnText"></span>
                 <br>
             </div>
             <div>
                 <label for="name" class="label">Name: <span>*</span></label><br>
-                <input type="text" name="name" id="name" class="input" placeholder="Enter your Name" >
+                <input type="text" name="name" id="name" class="input" placeholder="Enter your Name" ><br>
+                <span id="nameErr" class="warnText"></span>
                 <br>
             </div>
             <div>
                 <label for="mailid" class="label">Email ID: <span>*</span></label><br>
-                <input type="text" name="mailid" id="mailid" class="input" placeholder="Enter your email id" >
+                <input type="text" name="mailid" id="mailid" class="input" placeholder="Enter your email id" ><br>
+                <span id="mailErr" class="warnText"></span>
                 <br>
             </div>
             <div>
                 <label for="age" class="label">Age: <span>*</span></label><br>
                 <input type="number" name="age" id="age" class="input" placeholder="Enter your Age" >
+                <span id="ageErr" class="warnText"></span><br>
                 <br>
             </div>
             <div>
@@ -43,17 +47,19 @@
                     <label for="female">Female</label>
                     <input type="radio" name="gender" id="others" class="radioBtn" value="others">
                     <label for="others">Others</label>
-                    <br>
                 </div>
+                <span id="genderErr" class="warnText"></span>
             </div>
             <div>
                 <label for="domain" class="label">Domain: <span>*</span></label><br>
-                <input type="text" name="domain" id="domain" class="input" placeholder="Domains of interest (sep by ',')" >
+                <input type="text" name="domain" id="domain" class="input" placeholder="Domains of interest (sep by ',')" ><br>
+                <span id="domainErr" class="warnText"></span>
                 <br>
             </div>
             <div>
                 <label for="progLang" class="label">Programming Languages: <span>*</span></label><br>
-                <input type="text" id="progLang" class="input" placeholder="Enter Programming Languages (sep by ',')" >
+                <input type="text" id="progLang" class="input" placeholder="Enter Programming Languages (sep by ',')" ><br>
+                <span id="progLangErr" class="warnText"></span>
                 <br>
             </div>
             <div id="checkBoxer">
@@ -76,8 +82,8 @@
                     <br>
                     <input type="checkbox" id="hackerearth" class="checkOptions" name="progPltfm" value="hackerearth">
                     <label for="hackerearth">HackerEarth</label>
-                    <br>
                 </div>
+                <span id="progPltfmErr" class="warnText"></span>
             </div>
             <div>
                 <label for="department" class="label">Department: <span>*</span></label><br>
@@ -90,16 +96,21 @@
                     <option value="ece" for="department">ECE</option>
                 </select>
                 <br>
+                <span id="deptErr" class="warnText"></span>
             </div>
             <div>
                 <label for="password" class="label">Password: <span>*</span></label><br>
-                <input type="password" name="pass" id="pass" class="input" placeholder="Enter your Password" >
+                <input type="password" name="pass" id="pass" class="input" placeholder="Enter your Password" ><br>
+                <span id="passwordErr" class="warnText"></span>
                 <br>
             </div>
-            <div> <label for="confirmPass" class="label">Confirm Password: <span>*</span></label><br>
-                <input type="password" name="confirmPass" id="confirmPass" class="input" placeholder="Confirm your Password" >
+            <div>
+                <label for="confirmPass" class="label">Confirm Password: <span>*</span></label><br>
+                <input type="password" name="confirmPass" id="confirmPass" class="input" placeholder="Confirm your Password" ><br>
+                <span id="confirmPassErr" class="warnText"></span>
                 <br>
             </div>
+            <br>
             <input type="submit" id="button">
         </form>
     </div>
