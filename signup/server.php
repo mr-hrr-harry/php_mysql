@@ -5,8 +5,16 @@
     $server_name = $env['server_name'];
     $user = $env['user'];
     $password = $env['password'];
-    $db_name = $env['db_name']
+    $db_name = $env['db_name'];
 
+    $conn = new  mysqli($server_name, $user, $password, $db_name);
+
+    if($conn -> connect_error){
+        die("Connection failed: " . $conn -> connect_error);
+    }
+    else{
+        echo "Connected Succesfully!";
+    }
 
     $regno = $_POST['regno'];
     $name = $_POST['name'];
