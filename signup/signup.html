@@ -10,7 +10,7 @@
 
 <body>
     <div id="formDiv" class="fromStyles">
-        <form  name="students" id="students" onsubmit="validateForm()" action="./server.php" method="post">
+        <form  name="students" id="students" onsubmit="validateForm()" action="http://127.0.0.1:80/php_mysql/signup/server.php" method="post">
             <div id="titleDiv">
                 <label for="students" id="formTitle">REGISTRATION DETAILS</label><br>
             </div>
@@ -42,11 +42,11 @@
                 <label for="gender" class="label">Gender: <span>*</span></label><br>
                 <div id="genderBox">
                     <input type="radio" name="gender" id="male" class="radioBtn" value="male" >
-                    <label for="male">Male</label>
+                    <label for="male" class="radioLbl">Male</label>
                     <input type="radio" name="gender" id="female" class="radioBtn" value="female">
-                    <label for="female">Female</label>
+                    <label for="female" class="radioLbl">Female</label>
                     <input type="radio" name="gender" id="others" class="radioBtn" value="others">
-                    <label for="others">Others</label>
+                    <label for="others" class="radioLbl">Others</label>
                 </div>
                 <span id="genderErr" class="warnText"></span>
             </div>
@@ -58,29 +58,29 @@
             </div>
             <div>
                 <label for="progLang" class="label">Programming Languages: <span>*</span></label><br>
-                <input type="text" id="progLang" class="input" placeholder="Enter Programming Languages (sep by ',')" ><br>
+                <input type="text" name="progLang" id="progLang" class="input" placeholder="Enter Programming Languages (sep by ',')" ><br>
                 <span id="progLangErr" class="warnText"></span>
                 <br>
             </div>
             <div id="checkBoxer">
                 <label for="progPltfm" class="label">Programming Platforms: <span>*</span></label><br>
                 <div>
-                    <input type="checkbox" id="leetcode" class="checkOptions" name="progPltfm" value="leetcode">
+                    <input type="checkbox" id="leetcode" class="checkOptions" name="progPltfm[]" value="leetcode">
                     <label for="leetcode">LeetCode</label>
                     <br>
-                    <input type="checkbox" id="skillrack" class="checkOptions" name="progPltfm" value="skillrack">
+                    <input type="checkbox" id="skillrack" class="checkOptions" name="progPltfm[]" value="skillrack">
                     <label for="skillrack">Skillrack</label>
                     <br>
-                    <input type="checkbox" id="g4g" class="checkOptions" name="progPltfm" value="g4g">
+                    <input type="checkbox" id="g4g" class="checkOptions" name="progPltfm[]" value="g4g">
                     <label for="g4g">Geeks for Geeks</label>
                     <br>
-                    <input type="checkbox" id="codechef" class="checkOptions" name="progPltfm" value="codechef">
+                    <input type="checkbox" id="codechef" class="checkOptions" name="progPltfm[]" value="codechef">
                     <label for="codechef">Codechef</label>
                     <br>
-                    <input type="checkbox" id="hackerrank" class="checkOptions" name="progPltfm" value="hackerrank">
+                    <input type="checkbox" id="hackerrank" class="checkOptions" name="progPltfm[]" value="hackerrank">
                     <label for="hackerrank">HackerRank</label>
                     <br>
-                    <input type="checkbox" id="hackerearth" class="checkOptions" name="progPltfm" value="hackerearth">
+                    <input type="checkbox" id="hackerearth" class="checkOptions" name="progPltfm[]" value="hackerearth">
                     <label for="hackerearth">HackerEarth</label>
                 </div>
                 <span id="progPltfmErr" class="warnText"></span>
@@ -99,7 +99,7 @@
                 <span id="deptErr" class="warnText"></span>
             </div>
             <div>
-                <label for="password" class="label">Password: <span>*</span></label><br>
+                <label for="pass" class="label">Password: <span>*</span></label><br>
                 <input type="password" name="pass" id="pass" class="input" placeholder="Enter your Password" ><br>
                 <span id="passwordErr" class="warnText"></span>
                 <br>
@@ -116,7 +116,7 @@
     </div>
 
     <script src="./script.js"></script>
-    <script src="../handler.js"></script>
+    <script src="../handler/handler.js"></script>
 
 </body>
 
