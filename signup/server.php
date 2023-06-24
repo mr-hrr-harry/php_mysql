@@ -10,10 +10,11 @@
     $conn = new  mysqli($server_name, $user, $password, $db_name);
 
     if($conn -> connect_error){
-        die("Connection failed: " . $conn -> connect_error);
+        echo "Connectio failed!<br>";
+        // die("Connection failed: " . $conn -> connect_error);
     }
     else{
-        echo "Connected Succesfully!";
+        echo "Connected Succesfully!<br>";
     }
 
     $regno = $_POST['regno'];
@@ -28,7 +29,7 @@
     $str="";
     if ( isset($progPltfm) && is_array($progPltfm) ){
         foreach ( $progPltfm as $val) {
-            $str = $str . $val . ",";
+            $str = $str . $val . "-";
         }
     }
 
@@ -38,6 +39,32 @@
     
     $department = $_POST['department'];
     $pass = $_POST['pass'];
-    $confirmPass = $_POST['confirmPass'];
+
+    $table = $env['table_name'];
+
+    $field1 = $env['field1'];
+    $field2 = $env['field2'];
+    $field3 = $env['field3'];
+    $field4 = $env['field4'];
+    $field5 = $env['field5'];
+    $field6 = $env['field6'];
+    $field7 = $env['field7'];
+    $field8 = $env['field8'];
+    $field9 = $env['field9'];
+    $field10 = $env['field10'];
+
+    $sql = "insert into " . $table . " ( " . $field1 . ", " . $field2 . ", " . $field3 . ", " . $field4 . ", " . $field5 . ", " . $field6 . ", " . $field7 . ", " . $field8 . ", " . $field9 . ", " . $field10 . ") values ( " . 
+                $regno . ", \"" . $name . "\", \"" . $mailid . "\", " . $age . ", \"" . $gender . "\", \"" . $domain . "\", \"" . $progLang . "\", \"" . $str . "\", \"" .  $department . "\", \"" . $pass . "\") ";
+
+
+    if($conn->query($sql) === TRUE){
+        $last_id = $conn->insert_id;
+        echo "Insertion successful for " . $last_id;
+    }
+    else{
+        echo "Insertion failed!";
+    }
+
+    $conn->close();
 
 ?>

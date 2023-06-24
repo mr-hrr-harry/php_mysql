@@ -96,5 +96,8 @@ function validateForm(e) {
     }
 
     document.getElementById("students").submit()
+    setTimeout(() => {
+        windows
+    }, 3000);
 
 }
