@@ -96,8 +96,10 @@ function validateForm(e) {
     }
 
     document.getElementById("students").submit()
-    setTimeout(() => {
-        windows
-    }, 3000);
+
+    var allInputs = document.querySelectorAll('input')
+    allInputs.forEach((eachInput) => {
+        eachInput.value = ""
+    })
 
 }

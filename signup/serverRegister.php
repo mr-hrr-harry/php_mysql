@@ -67,4 +67,7 @@
 
     $conn->close();
 
+    header("Location: ../indexLogin.html");
+    exit();
+
 ?>
