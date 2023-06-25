@@ -97,9 +97,5 @@ function validateForm(e) {
 
     document.getElementById("students").submit()
 
-    var allInputs = document.querySelectorAll('input')
-    allInputs.forEach((eachInput) => {
-        eachInput.value = ""
-    })
 
 }

@@ -67,7 +67,20 @@
 
     $conn->close();
 
-    header("Location: ../indexLogin.html");
+    echo '<script>
+        
+    var allInputs = document.querySelectorAll("input")
+    allInputs.forEach((eachInput) => {
+        eachInput.value = ""
+    })
+
+    alert("Registration Successful!")
+
+    window.open("../indexLogin.html", "_self")
+    </script>';
+
+    
+    // header("Location: ../indexLogin.html");
     exit();
 
 ?>

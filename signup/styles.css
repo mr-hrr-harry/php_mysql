@@ -72,6 +72,11 @@ span{
     width: 20px;
 }
 
+.checkOptions{
+    height: 20px;
+    width: 20px;
+}
+
 .warnText{
     height: auto;
     width: auto;
