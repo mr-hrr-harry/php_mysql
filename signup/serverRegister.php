@@ -10,7 +10,7 @@
     $conn = new  mysqli($server_name, $user, $password, $db_name);
 
     if($conn -> connect_error){
-        echo "Connectio failed!<br>";
+        echo "Connection failed!<br>";
         // die("Connection failed: " . $conn -> connect_error);
     }
     else{
@@ -79,7 +79,7 @@
     window.open("../indexLogin.html", "_self")
     </script>';
 
-    
+    // or php redirection ↓↓↓()
     // header("Location: ../indexLogin.html");
     exit();
 
