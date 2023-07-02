@@ -1,3 +1,7 @@
+body{
+    min-height: 100vh;
+}
+
 #loginDiv{
     height: 500px;
     width: 400px;

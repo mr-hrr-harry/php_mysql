@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./signup/styles.css">
-    <link rel="stylesheet" href="./stylesLogin.css">
+    <link rel="stylesheet" href="./login/stylesLogin.css">
     <title>Login</title>
 </head>
 
 <body>
     <div id="loginDiv" class="loginStyles">
-        <form  name="students  " id="students" onsubmit="validateLogin()" action="http://127.0.0.1:80/php_mysql/serverLogin.php" method="post">
+        <form  name="students  " id="students" onsubmit="validateLogin()" action="http://127.0.0.1:80/php_mysql/login/serverLogin.php" method="post">
             <div id="titleDiv">
                 <label for="students" id="formTitle">LOGIN FORM</label><br>
             </div>
@@ -32,10 +32,11 @@
         </form>
     </div>
 
-    <script src="./scriptLogin.js"></script>
+    <script src="./login/scriptLogin.js"></script>
     <script src="./handler/handler.js"></script>
 
 </body>
 
 </html>
+
 
