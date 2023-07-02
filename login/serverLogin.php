@@ -23,12 +23,14 @@
     $table = $env['table_name'];
 
     $field1 = $env['field10'];
-    $field2 = $env['field3'];
+    $field2 = $env['field2'];
+    $field3 = $env['field3'];
 
-    $sql  = "select " . $field1 ." from " . $table . " where ". $field2 ." = \"" . $mailid . "\"";
+    $sql  = "select " . $field2 ." from " . $table . " where ". $field3 ." = \"" . $mailid . "\" and ". $field1 . " = \"" . $pass . "\"";
+    $result = $conn->query($sql);
 
     $f=0;
-    if($conn->query($sql) == 1){
+    if($result->num_rows == 1){
         echo 'Login Successfull!';
         $f=1;
     }
